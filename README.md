@@ -1,75 +1,56 @@
-# Database Project Starter
+# Shop Manager Project
 
-This is a starter project for you to use to start your Python database projects.
+We are going to write a small terminal program allowing the user to manage a
+shop database containing some items and orders.
 
-There are two videos to support:
+## User stories
 
-* [A demonstration of setting up the project](https://youtu.be/8dBADUN8gdg?t=0s)
-* [A walkthrough of the project codebase](https://www.youtube.com/watch?v=8dBADUN8gdg&t=287s) 
+```
+As a shop manager
+So I can know which items I have in stock
+I want to keep a list of my shop items with their name and unit price.
 
-## Setup
+As a shop manager
+So I can know which items I have in stock
+I want to know which quantity (a number) I have for each item.
 
-```shell
-# Clone the repository to your local machine
-; git clone git@github.com:makersacademy/databases-in-python-project-starter.git YOUR_PROJECT_NAME
+As a shop manager
+So I can manage items
+I want to be able to create a new item.
 
-# Or, if you don't have SSH keys set up
-; git clone https://github.com/makersacademy/databases-in-python-project-starter.git YOUR_PROJECT_NAME
+As a shop manager
+So I can know which orders were made
+I want to keep a list of orders with their customer name.
 
-# Enter the directory
-; cd YOUR_PROJECT_NAME
+As a shop manager
+So I can know which orders were made
+I want to assign each order to their corresponding item.
 
-# Install dependencies and set up the virtual environment
-; pipenv install
-# Read below if you see an error with `python_full_version`
+As a shop manager
+So I can know which orders were made
+I want to know on which date an order was placed. 
 
-# Activate the virtual environment
-; pipenv shell
-
-# Create the database
-; createdb YOUR_PROJECT_NAME
-
-# Open lib/database_connection.py and change the database name to YOUR_PROJECT_NAME
-; open lib/database_connection.py
-
-# Run the tests
-; pytest
-
-# Run the app
-; python app.py
+As a shop manager
+So I can manage orders
+I want to be able to create a new order.
 ```
 
-<details>
-  <summary>:confused: I see an error about `python_full_version`?</summary>
+Here's an example of the terminal output your program should generate (yours might be slightly different — that's totally OK):
 
-  <!-- OMITTED -->
+```
+Welcome to the shop management program!
 
-  ---
+What do you want to do?
+  1 = list all shop items
+  2 = create a new item
+  3 = list all orders
+  4 = create a new order
 
-  Your `pipenv` may be outdated and subject to a bug with newer `Pipfile`s.
+1 [enter]
 
-  ```shell
-  ; pipenv --version
-  2022.9.24 # If you see something in September 2022, try this
-  ; pip3 install "pipenv>=2022.11.5" -U
-  # pip3 will update pipenv for you
+Here's a list of all shop items:
 
-  # Then try running `pipenv install` again
-  ; pipenv install
-  ```
-
-  If that works, great! If not, contact your coach.
-
-  ---
-</details>
-
-
-<!-- BEGIN GENERATED SECTION DO NOT EDIT -->
-
----
-
-**How was this resource?**  
-[😫](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy%2Fdatabases-in-python-project-starter&prefill_File=README.md&prefill_Sentiment=😫) [😕](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy%2Fdatabases-in-python-project-starter&prefill_File=README.md&prefill_Sentiment=😕) [😐](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy%2Fdatabases-in-python-project-starter&prefill_File=README.md&prefill_Sentiment=😐) [🙂](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy%2Fdatabases-in-python-project-starter&prefill_File=README.md&prefill_Sentiment=🙂) [😀](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy%2Fdatabases-in-python-project-starter&prefill_File=README.md&prefill_Sentiment=😀)  
-Click an emoji to tell us.
-
-<!-- END GENERATED SECTION DO NOT EDIT -->
+ #1 Super Shark Vacuum Cleaner - Unit price: 99 - Quantity: 30
+ #2 Makerspresso Coffee Machine - Unit price: 69 - Quantity: 15
+ (...)
+```
